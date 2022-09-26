@@ -13,9 +13,17 @@ class Donation extends Model
         return $this->belongsTo(User::class);  
       }
 
- public function bloodtype(){
+ public function recipients(){
 
-    return $this->belongsTo(Blood_Types::class);
+    return $this->belongsTo(Recipients::class);
+ }
+ public function donors(){
+
+    return $this->belongsTo(Donors::class);
+
+ }
+ public function bloodbank(){
+    return $this->belongsTo(Blood_Bank::class);
  }
 
 }

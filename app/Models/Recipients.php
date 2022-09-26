@@ -14,5 +14,8 @@ class Recipients extends Model
         return $this->belongsTo(Blood_Types::class);
     }
 
-    public function 
+    public function donations(){
+
+        return $this->hasMany(Donation::class);
+    }
 }
