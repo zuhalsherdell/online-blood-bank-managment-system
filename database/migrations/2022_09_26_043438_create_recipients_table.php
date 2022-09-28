@@ -16,7 +16,7 @@ class CreateRecipientsTable extends Migration
         Schema::create('recipients', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('phone');
+            $table->integer('phone');
             $table->integer('blood_type_id');
             $table->timestamps();
         });

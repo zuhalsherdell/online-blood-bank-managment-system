@@ -16,7 +16,7 @@ class CreateDonorsTable extends Migration
         Schema::create('donors', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('phone');
+            $table->integer('phone');
             $table->integer('blood_type_id');
             $table->timestamps();
         });

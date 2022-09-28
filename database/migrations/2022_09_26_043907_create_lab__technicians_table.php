@@ -16,8 +16,8 @@ class CreateLabTechniciansTable extends Migration
         Schema::create('lab__technicians', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integar('phone');
-            $table->integar('blood_bank_id');
+            $table->integer('phone');
+            $table->integer('blood_bank_id');
             $table->timestamps();
         });
     }
