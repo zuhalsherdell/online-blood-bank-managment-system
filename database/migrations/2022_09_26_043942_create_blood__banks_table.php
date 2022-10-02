@@ -13,10 +13,11 @@ class CreateBloodBanksTable extends Migration
      */
     public function up()
     {
-        Schema::create('blood__banks', function (Blueprint $table) {
+        Schema::create('blood_banks', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('address');
+            $table->integer('address');
+            $table->integer('name');
+            $table->integer('lab_technician_id');
             $table->timestamps();
         });
     }

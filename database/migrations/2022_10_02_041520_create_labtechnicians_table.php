@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLabTechniciansTable extends Migration
+class CreateLabtechniciansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateLabTechniciansTable extends Migration
      */
     public function up()
     {
-        Schema::create('lab__technicians', function (Blueprint $table) {
+        Schema::create('labtechnicians', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('phone');
-            $table->integer('blood_bank_id');
+            $table->string('phone');
+            $table->string('email');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateLabTechniciansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lab__technicians');
+        Schema::dropIfExists('labtechnicians');
     }
 }
